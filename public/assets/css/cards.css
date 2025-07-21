@@ -14,6 +14,11 @@
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .campus-card:hover,
@@ -22,16 +27,34 @@
     transform: translateY(-5px);
 }
 
+.campus-card .image-container,
+.voice-card .image-container,
+.projeto-card .image-container {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
 .campus-card img,
 .voice-card img,
 .projeto-card img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .voice-content {
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .voice-content h3 {
@@ -59,4 +82,8 @@
     font-weight: 600;
     color: #2e7d32;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
